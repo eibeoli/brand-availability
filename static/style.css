@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800");
+
+body {
+    background: linear-gradient(300deg, #d1d4ff, #c1b6ff, #eeb5ff) fixed;
+}
+
+/**#draggable {
+    position: absolute;
+    width: 45%;
+    margin: auto;
+    padding: 20px;
+}**/ 
+
+#main {
+    background: white;
+    width: 40%;
+    margin: auto;
+    margin-top: 200px;
+    padding: 20px;
+    box-shadow: 5px 10px #eeb5ff;
+    border-radius: 25px;
+}
+
+#title {
+    position: absolute;
+    margin-top: -100px;
+    padding: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 60px;
+    text-align: center;
+    font-size-adjust: 0.30;
+
+}
+
+#textbox {
+    z-index: 10000;
+    
+}
+
+.inputHolder {
+    text-align: center;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+#pbelow {
+    position: absolute;
+    padding: 30px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
