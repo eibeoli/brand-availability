@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "profile_name": "default",
+        "project_name": "brand-availabil",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-1y1byoj3v",
+        "aws_region": "us-east-1"
+    }
+}

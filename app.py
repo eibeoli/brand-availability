@@ -1,10 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import requests
-
-# RESOURCES
-# https://code.visualstudio.com/docs/python/tutorial-flask
-# https://stackoverflow.com/questions/13607278/html5-restricting-input-characters
-
 
 app = Flask(__name__)
 
@@ -12,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/name", methods=["POST"])
+@app.route("/dev/name", methods=["POST"])
 def scraper():
     url = request.form['textbox']
     tumblr = requests.get(f'https://{url}.tumblr.com')
