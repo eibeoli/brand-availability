@@ -34,6 +34,16 @@ body {
     text-align: center;
 }
 
+input[type=submit]{
+    background-color: rgb(255, 229, 180);
+    border: none;
+    padding: 2.5px 5px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    border-radius: 5px;
+}
+
 p {
     font-family: "Roboto", sans-serif;
     text-align: center;

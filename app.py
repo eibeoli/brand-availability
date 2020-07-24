@@ -14,11 +14,9 @@ def scraper():
     insta = requests.get(f'https://www.instagram.com/{url}')
     reddit = requests.get(f'http://www.reddit.com/u/{url}')
     github = requests.get(f'https://www.github.com/{url}')
-    twitch = requests.get(f'https://www.twitch/tv/{url}')
     twitter = requests.get(f'https://www.twitter.com/{url}')
-    domain_com = requests.get(f'https:///www.{url}.com')
 
-    name_list = {tumblr:'tumblr', insta:'instagram', reddit: 'reddit', github: 'github', twitch:'twitch', twitter:'twitter', domain_com:'domain (.com)'}
+    name_list = {tumblr:'tumblr', insta:'instagram', reddit: 'reddit', github: 'github', twitter:'twitter'}
     avail = []
     not_avail = []
 
