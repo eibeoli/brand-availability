@@ -3,19 +3,22 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route("/dev/name", methods=["POST"])
+@app.route('/name', methods=['POST', 'GET'])
 def scraper():
     url = request.form['textbox']
     tumblr = requests.get(f'https://{url}.tumblr.com')
     insta = requests.get(f'https://www.instagram.com/{url}')
     reddit = requests.get(f'http://www.reddit.com/u/{url}')
     github = requests.get(f'https://www.github.com/{url}')
+    twitch = requests.get(f'https://www.twitch/tv/{url}')
+    twitter = requests.get(f'https://www.twitter.com/{url}')
+    domain_com = requests.get(f'https:///www.{url}.com')
 
-    name_list = {tumblr:'tumblr', insta:'instagram', reddit: 'reddit', github: 'github'}
+    name_list = {tumblr:'tumblr', insta:'instagram', reddit: 'reddit', github: 'github', twitch:'twitch', twitter:'twitter', domain_com:'domain (.com)'}
     avail = []
     not_avail = []
 

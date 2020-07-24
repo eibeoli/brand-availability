@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
-        <script type="text/javascript" src="{{ url_for('static', filename='drag.js')}}"></script>
-        <title>brand availability checker</title>
-        <link rel="icon" href="{{ url_for('static', filename='star.png')}}">
+        <title>brand checker</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.png')}}">
     </head>
 
     <body>
         <div id="main">
             <div id="title"><i>brand availability checker</i></div>
+
             {% block content %}
             <p>trying to find the right name for your internet presence? enter below 🌱</p>
             <p></p>
@@ -22,18 +22,17 @@
                     <input type="submit" value="Submit">
             </form>
             </div>
+
             {% endblock %}
             </div>
 
         <script>
-            function prevent() {
-                var e = event || window.event;  // get event object
-                var key = e.keyCode || e.which; // get key cross-browser
-
-                if (key < 37 && key != 8 || key > 90 ){ //if it is not a number ascii code
-                    //Prevent default action, which is inserting character
-                if (e.preventDefault) e.preventDefault(); //normal browsers
-                    e.returnValue = false; //IE
+            function prevent() { //limits what can be entered in the search bar
+                var e = event || window.event;  
+                var key = e.keyCode || e.which; 
+                if (key < 37 && key != 8 || key > 90 ){ 
+                    if (e.preventDefault) e.preventDefault();
+                        e.returnValue = false;
                 }
             }
         </script>

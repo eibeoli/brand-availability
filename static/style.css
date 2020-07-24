@@ -6,13 +6,6 @@ body {
     background: linear-gradient(300deg, #d1d4ff, #c1b6ff, #eeb5ff) fixed;
 }
 
-/**#draggable {
-    position: absolute;
-    width: 45%;
-    margin: auto;
-    padding: 20px;
-}**/ 
-
 #main {
     background: white;
     width: 40%;
@@ -31,12 +24,10 @@ body {
     font-size: 60px;
     text-align: center;
     font-size-adjust: 0.30;
-
 }
 
 #textbox {
     z-index: 10000;
-    
 }
 
 .inputHolder {
