@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+
+<div class="grid-container"> <!---->
+    {%if len_a == 0%}
+    {%else%}
+        {%for i in range(0, len_a)%}
+            <div class="small-container" style="background-color: lightgreen">{{ url }} is available on {{ avail[i]}}</div>
+        {%endfor%} 
+    {%endif%}
+
+    {%if len_na == 0%}
+    {%else%}
+        {%for i in range(0, len_na)%}
+            <div class="small-container" style="background-color: lightcoral">{{ url }} is not available on {{ not_avail[i]}}</div>
+        {%endfor%} 
+    {%endif%}
+
+</div>
+
+{% endblock %}

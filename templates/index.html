@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>brand checker</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.png')}}">
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="title"><i>brand availability checker</i></div>
+
+            
+            <p>trying to find the right name for your internet presence? enter below 🌱</p>
+            
+            <p></p>
+            <div class="inputHolder">
+            <form action="/name" onKeyDown="prevent()" method="POST">
+                    <input type="text" name="textbox">
+                    <input type="submit" value="enter">
+            </form>
+            </div>
+
+            </div>
+
+            {% block content %}
+            {% endblock %}
+
+        <script>
+            function prevent() { //limits what can be entered in the search bar
+                var e = event || window.event;  
+                var key = e.keyCode || e.which; 
+                if (key < 37 && key != 8 || key > 90 ){ 
+                    if (e.preventDefault) e.preventDefault();
+                        e.returnValue = false;
+                }
+            }
+        </script>
+
+<div class="dropdown">
+    <span>?</span>
+    <div class="dropdown-content">
+    <p>made in flask, python, html/css by eibeoli<br>hosted on aws lambda<br>view code <a href="https://github.com/eibeoli/brand-availability">here</a></p>
+    </div>
+  </div>
+    </body>
+</html>
